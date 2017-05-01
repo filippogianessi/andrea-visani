@@ -1,2 +1,46 @@
-# andrea-visani
-Repository for Andrea Visani's website
+body {
+  background-color: black;
+  font-family: "Helvetica", sans-serif;
+}
+
+.logo--container {
+  text-align: center;
+}
+
+
+.container--item {
+  border-top: solid white 3px;
+  border-bottom: solid white 2px;
+  margin: 16px 80px;
+
+}
+
+.color--white {
+  color: #ffffff;
+}
+
+.title-list--container {
+  margin: 16px 80px;
+}
+
+.container--name {
+  margin: 56px;
+  display: inline-block;
+
+}
+
+.container--go-to-song-button {
+  width: 50px;
+  height: 50px;
+  border: solid white 3px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.container--go-to-youtube {
+  width: 50px;
+  height: 50px;
+  border: solid red 3px;
+  border-radius: 50px;
+  display: inline-block;
+}

@@ -1,2 +1,88 @@
-# andrea-visani
-Repository for Andrea Visani's website
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href=" css/style.css">
+  <title>diaulo</title>
+</head>
+
+<body>
+
+  <div class="logo--container">
+    <img src="assets/logo-diaulo.svg" alt="666">
+  </div>
+  <div class="title-list--container">
+    <h1 class="color--white">Titoli delle songs</h1>
+  </div>
+
+  <div class="container--list">
+    <div class="container--item">
+      <div class="container--name color--white"><h2>Titolo della canzone</h2></div>
+      <div class="container--go-to-song-button"></div>
+      <div class="container--go-to-youtube"></div>
+    </div>
+
+  </div>
+  <div id="paypal-button-container"></div>
+
+
+
+
+</body>
+
+</html>
+
+
+
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+
+<script>
+  paypal.Button.render({
+
+    // Set your environment
+
+    env: 'sandbox', // sandbox | production
+
+    // PayPal Client IDs - replace with your own
+    // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+
+    client: {
+      sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+      production: 'Aco85QiB9jk8Q3GdsidqKVCXuPAAVbnqm0agscHCL2-K2Lu2L6MxDU2AwTZa-ALMn_N0z-s2MXKJBxqJ'
+    },
+
+    // Set to 'Pay Now'
+
+    commit: true,
+
+    // Wait for the PayPal button to be clicked
+
+    payment: function() {
+
+      // Make a client-side call to the REST api to create the payment
+
+      return paypal.rest.payment.create(this.props.env, this.props.client, {
+        transactions: [{
+          amount: {
+            total: '0.01',
+            currency: 'USD'
+          }
+        }]
+      });
+    },
+
+    // Wait for the payment to be authorized by the customer
+
+    onAuthorize: function(data, actions) {
+
+      // Execute the payment
+
+      return actions.payment.execute().then(function() {
+        document.querySelector('#paypal-button-container').innerText = 'Payment Complete!';
+      });
+    }
+
+  }, '#paypal-button-container');
+</script>

@@ -1,17 +1,17 @@
 body {
   background-color: black;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Chivo", sans-serif;
 }
 
 .logo--container {
   text-align: center;
+  margin: 80px;
 }
 
 
 .container--item {
   border-top: solid white 3px;
-  border-bottom: solid white 2px;
-  margin: 16px 80px;
+  margin: 16px 320px;
 
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .title-list--container {
-  margin: 16px 80px;
+  margin: 16px 320px;
 }
 
 .container--name {
@@ -35,6 +35,7 @@ body {
   border: solid white 3px;
   border-radius: 50px;
   display: inline-block;
+  margin: 56px 8px;
 }
 
 .container--go-to-youtube {
@@ -43,4 +44,21 @@ body {
   border: solid red 3px;
   border-radius: 50px;
   display: inline-block;
+  margin: 56px 8px;
+
+}
+
+
+.facebook--button {
+  border: solid red 3px;
+border-radius: 100px;
+text-align: center;
+padding: 15px 20px;
+}
+
+.social-links--container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }

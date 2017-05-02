@@ -11,10 +11,10 @@ body {
 
 .container--item {
   border-top: solid white 3px;
-  margin: 16px 320px;
+  margin: 16px 120px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 24px;
 
@@ -25,7 +25,7 @@ body {
 }
 
 .title-list--container {
-  margin: 16px 320px;
+  margin: 16px 120px;
 }
 
 
@@ -50,6 +50,13 @@ padding: 15px 20px;
   padding: 15px 15px;
 }
 
+.bio--button {
+  border: solid red 3px;
+  border-radius: 100px;
+  text-align: center;
+  padding: 15px 25px;
+}
+
 .social-links--container {
   display: flex;
   flex-flow: row nowrap;
@@ -63,6 +70,7 @@ padding: 15px 20px;
   border-radius: 100px;
   text-align: center;
   padding: 15px 15px;
+  margin: 0px 10px;
 }
 
 .container--download-button {
@@ -70,10 +78,16 @@ padding: 15px 20px;
   border-radius: 100px;
   text-align: center;
   padding: 15px 15px;
+  margin: 0px 10px;
 }
 .container--buy-button {
   border: solid red 3px;
   border-radius: 100px;
   text-align: center;
   padding: 15px 15px;
+  margin: 0px 10px;
+}
+
+.song-links--items {
+  display: flex;
 }
